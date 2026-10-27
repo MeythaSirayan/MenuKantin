@@ -15,31 +15,11 @@ class DaftarMenu extends StatefulWidget {
 
 class _DaftarMenuState extends State<DaftarMenu> {
   final List<MenuKantin> daftarMenu = [
-    const MenuKantin(
-      nama: 'Beef Burger',
-      harga: 20000,
-      deskripsi: 'Burger daging sapi dengan keju, selada, dan saus spesial.',
-    ),
-    const MenuKantin(
-      nama: 'Chicken Katsu',
-      harga: 20000,
-      deskripsi: 'Ayam berbalut tepung renyah dengan saus gurih.',
-    ),
-    const MenuKantin(
-      nama: 'French Fries',
-      harga: 20000,
-      deskripsi: 'Kentang goreng renyah dengan sedikit garam.',
-    ),
-    const MenuKantin(
-      nama: 'Croffle',
-      harga: 14000,
-      deskripsi: 'Pastry renyah di luar dan lembut di dalam.',
-    ),
-    const MenuKantin(
-      nama: 'Matcha Latte',
-      harga: 16000,
-      deskripsi: 'Minuman matcha dengan perpaduan susu yang lembut.',
-    ),
+    const MenuKantin(nama: 'Beef Burger', harga: 20000),
+    const MenuKantin(nama: 'Chicken Katsu', harga: 20000),
+    const MenuKantin(nama: 'French Fries', harga: 20000),
+    const MenuKantin(nama: 'Croffle', harga: 14000),
+    const MenuKantin(nama: 'Matcha Latte', harga: 16000),
   ];
 
   Future<void> bukaTambahMenu() async {

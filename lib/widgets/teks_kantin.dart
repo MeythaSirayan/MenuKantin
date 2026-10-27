@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// Poppins dipilih karena memiliki bentuk huruf yang modern dan mudah dibaca.
-// Warna dan ketebalan teks dibuat konsisten agar tampilan terlihat rapi.
-// Ukuran, warna, dan ketebalan dapat diatur ulang pada setiap pemakaian.
+// Widget  menggunakan font Poppins karena teks terlihat modern.
+// Warna, ukuran, dan ketebalan teks bisa diatur sesuai kebutuhan tampilan.
+// Gaya sederhana dipilih agar tampilan aplikasi kantin tetap rapi dan konsisten.
+
 class TeksKantin extends StatelessWidget {
   final String teks;
   final double ukuran;

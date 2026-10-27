@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../models/menu_kantin.dart';
 import '../widgets/teks_kantin.dart';
 
+import 'package:flutter/services.dart';
+
 class TambahMenu extends StatefulWidget {
   const TambahMenu({super.key});
 
@@ -48,7 +50,7 @@ class _TambahMenuState extends State<TambahMenu> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFB39DDB),
-        foregroundColor: const Color(0xFF6A4C93),
+        foregroundColor: Colors.white,
         title: const TeksKantin(
           'Tambah Menu',
           ukuran: 20,
@@ -82,6 +84,7 @@ class _TambahMenuState extends State<TambahMenu> {
               TextFormField(
                 controller: _hargaController,
                 keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: const InputDecoration(
                   labelText: 'Harga Menu',
                   hintText: 'Contoh: 10000',

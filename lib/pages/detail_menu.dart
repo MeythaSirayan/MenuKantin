@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../models/menu_kantin.dart';
 import '../widgets/teks_kantin.dart';
 
+import 'package:get/get.dart';
+
 class DetailMenu extends StatelessWidget {
   final MenuKantin menu;
 
@@ -13,7 +15,16 @@ class DetailMenu extends StatelessWidget {
     const ungu = Color(0xFFB39DDB);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Detail Produk')),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFB39DDB),
+        foregroundColor: Colors.white,
+        title: const TeksKantin(
+          'Detail Produk',
+          ukuran: 20,
+          warna: Colors.white,
+          ketebalan: FontWeight.bold,
+        ),
+      ),
       body: Align(
         alignment: Alignment.topCenter,
         child: SingleChildScrollView(
@@ -37,33 +48,22 @@ class DetailMenu extends StatelessWidget {
               const SizedBox(height: 20),
               TeksKantin(
                 menu.nama,
-                ukuran: 26,
+                ukuran: 20,
                 ketebalan: FontWeight.bold,
                 warna: const Color(0xFF6A4C93),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 5),
               TeksKantin(
                 'Rp ${menu.harga}',
-                ukuran: 22,
+                ukuran: 18,
                 ketebalan: FontWeight.bold,
                 warna: ungu,
               ),
-              const SizedBox(height: 24),
-
-              if (menu.deskripsi != null && menu.deskripsi!.isNotEmpty) ...[
-                const SizedBox(height: 24),
-                const TeksKantin(
-                  'Deskripsi',
-                  ukuran: 18,
-                  ketebalan: FontWeight.bold,
-                ),
-                const SizedBox(height: 8),
-                TeksKantin(menu.deskripsi!, ukuran: 15),
-              ],
+              const SizedBox(height: 8),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pop(context),
+                  onPressed: () => Get.back(),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ungu,
                     foregroundColor: Colors.white,
